@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Panel — Iron Force Gym</title>
+  <link rel="stylesheet" href="css/app.css" />
+</head>
+<body>
+  <div id="admin-root"></div>
+
+  <template id="tpl-admin">
+    <div class="admin-shell">
+      <aside class="admin-sidebar" id="admin-sidebar">
+        <div class="admin-sidebar__top">
+          <a href="admin.html" class="text-gradient" id="sidebar-brand">Iron Force Gym</a>
+          <button type="button" class="btn btn--ghost btn--icon" id="sidebar-collapse" aria-label="Contraer menú">
+            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+          </button>
+        </div>
+        <nav class="admin-nav" id="admin-nav"></nav>
+        <div class="admin-sidebar__foot">
+          <a href="index.html" style="color:var(--muted-foreground);font-size:0.75rem">← Ver landing pública</a>
+        </div>
+      </aside>
+      <div class="admin-main">
+        <header class="admin-header glass-strong">
+          <h1 id="admin-page-title">Dashboard</h1>
+          <div class="admin-header__user">
+            <div class="notif-wrap">
+              <button type="button" class="btn btn--ghost btn--icon" id="btn-notifications" aria-expanded="false" aria-label="Notificaciones" title="Notificaciones">
+                <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+                <span class="notif-badge" id="notif-badge" hidden>0</span>
+              </button>
+              <div class="notif-dropdown glass-strong" id="notif-dropdown" hidden></div>
+            </div>
+            <span id="admin-user-label"></span>
+            <div class="avatar" id="admin-avatar">U</div>
+            <button type="button" class="btn btn--ghost btn--icon" id="btn-signout" title="Cerrar sesión" aria-label="Cerrar sesión">
+              <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4M16 17l5-5-5-5M21 12H9"/></svg>
+            </button>
+          </div>
+        </header>
+        <div class="admin-content">
+          <section class="admin-panel" data-panel="dashboard" id="panel-dashboard"></section>
+          <section class="admin-panel" data-panel="acceso" id="panel-acceso"></section>
+          <section class="admin-panel" data-panel="caja" id="panel-caja"></section>
+          <section class="admin-panel" data-panel="asistencias" id="panel-asistencias"></section>
+          <section class="admin-panel" data-panel="socios" id="panel-socios"></section>
+          <section class="admin-panel" data-panel="whatsapp" id="panel-whatsapp"></section>
+          <section class="admin-panel" data-panel="ventas" id="panel-ventas"></section>
+          <section class="admin-panel" data-panel="empleados" id="panel-empleados"></section>
+          <section class="admin-panel" data-panel="estadisticas" id="panel-estadisticas"></section>
+          <section class="admin-panel" data-panel="license" id="panel-license"></section>
+          <section class="admin-panel" data-panel="brand" id="panel-brand"></section>
+          <section class="admin-panel" data-panel="locations" id="panel-locations"></section>
+          <section class="admin-panel" data-panel="plans" id="panel-plans"></section>
+          <section class="admin-panel" data-panel="trainers" id="panel-trainers"></section>
+          <section class="admin-panel" data-panel="testimonials" id="panel-testimonials"></section>
+          <section class="admin-panel" data-panel="users" id="panel-users"></section>
+        </div>
+        <div id="modal-host" class="modal-host" hidden></div>
+      </div>
+    </div>
+  </template>
+
+  <script src="js/data.js"></script>
+  <script src="js/gym-store.js"></script>
+  <script src="js/session.js"></script>
+  <script src="js/toast.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+  <script src="js/admin-sistema.js"></script>
+  <script src="js/admin.js"></script>
+</body>
+</html>

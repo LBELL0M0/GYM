@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ingresar — Iron Force Gym</title>
+  <link rel="stylesheet" href="css/app.css" />
+</head>
+<body>
+  <div class="auth-page">
+    <div class="auth-card glass">
+      <div class="auth-card__head">
+        <div class="auth-logo" aria-hidden="true">
+          <svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 4v16M8 8h12M8 16h12"/></svg>
+        </div>
+        <h1 id="auth-gym-name">Iron Force Gym</h1>
+        <p>Ingresá con tu <strong>DNI</strong> y contraseña del personal</p>
+      </div>
+
+      <div class="demo-accounts glass" style="margin:0 1.25rem 1rem;padding:0.85rem;border-radius:var(--radius);font-size:0.8rem">
+        <strong style="display:block;margin-bottom:0.5rem;color:var(--primary)">Cuentas demo (panel admin)</strong>
+        <p style="margin:0 0 0.35rem;color:var(--muted-foreground)">Contraseña para todas: <code style="color:var(--foreground)">demo123</code></p>
+        <ul style="margin:0;padding-left:1.1rem;color:var(--muted-foreground);line-height:1.5">
+          <li><strong>DNI 20111222</strong> — Ana Recepción (Recepción)</li>
+          <li><strong>DNI 20999888</strong> — Carlos Dueño (Dueño)</li>
+          <li><strong>DNI 18777666</strong> — Martín Profesor (Profesor)</li>
+          <li><strong>DNI 16555444</strong> — Lucía Admin (Super Admin)</li>
+        </ul>
+        <p style="margin:0.5rem 0 0;font-size:0.75rem"><a href="socio.html" style="color:var(--primary)">Portal del socio (solo DNI + PIN)</a> — ej. DNI <strong>30123456</strong>, PIN <strong>3456</strong> (últimos 4 del DNI) o <strong>1234</strong></p>
+      </div>
+
+      <div class="auth-tabs" role="tablist">
+        <button type="button" class="auth-tab is-active" role="tab" aria-selected="true" data-tab="login">Iniciar sesión</button>
+        <button type="button" class="auth-tab" role="tab" aria-selected="false" data-tab="register">Alta personal</button>
+      </div>
+      <form id="form-login" class="auth-panel is-active" autocomplete="on">
+        <div class="field">
+          <label for="login-dni">DNI</label>
+          <div class="input-wrap">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M9 12h6M9 8h6M9 16h4"/></svg>
+            <input id="login-dni" name="dni" inputmode="numeric" autocomplete="username" placeholder="Sin puntos" required />
+          </div>
+        </div>
+        <div class="field">
+          <label for="login-password">Contraseña</label>
+          <div class="input-wrap">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+            <input id="login-password" name="password" type="password" autocomplete="current-password" placeholder="••••••••" required minlength="6" />
+          </div>
+        </div>
+        <button type="submit" class="btn btn--primary btn--full gradient-primary btn--round" id="btn-login">Iniciar sesión</button>
+      </form>
+      <form id="form-register" class="auth-panel" autocomplete="on">
+        <div class="field">
+          <label for="reg-dni">DNI</label>
+          <div class="input-wrap">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M9 12h6"/></svg>
+            <input id="reg-dni" name="dni" inputmode="numeric" required />
+          </div>
+        </div>
+        <div class="field">
+          <label for="reg-name">Nombre completo</label>
+          <div class="input-wrap">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            <input id="reg-name" name="displayName" type="text" required />
+          </div>
+        </div>
+        <div class="field">
+          <label for="reg-password">Contraseña</label>
+          <div class="input-wrap">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+            <input id="reg-password" name="password" type="password" required minlength="6" />
+          </div>
+        </div>
+        <button type="submit" class="btn btn--primary btn--full gradient-primary btn--round" id="btn-register">Crear usuario</button>
+      </form>
+      <p class="auth-hint">Los datos del personal nuevo se guardan solo en este navegador. Los DNI demo del recuadro verde funcionan sin registrarlos.</p>
+      <div style="text-align:center;padding:0 1.5rem 1.5rem">
+        <a href="index.html" class="btn btn--link">← Volver a la landing</a>
+      </div>
+    </div>
+  </div>
+  <script src="js/data.js"></script>
+  <script src="js/session.js"></script>
+  <script src="js/toast.js"></script>
+  <script src="js/auth.js"></script>
+</body>
+</html>

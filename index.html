@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Iron Force Gym</title>
+  <link rel="stylesheet" href="css/app.css" />
+</head>
+<body>
+  <nav class="nav glass-strong" aria-label="Principal">
+    <div class="nav__inner container" style="max-width: 72rem">
+      <a href="index.html" class="nav__brand text-gradient" id="nav-brand-name">Iron Force Gym</a>
+      <div class="nav__links">
+        <button type="button" data-scroll="#hero">Inicio</button>
+        <button type="button" data-scroll="#trainers">Entrenadores</button>
+        <button type="button" data-scroll="#locations">Sedes</button>
+        <button type="button" data-scroll="#plans">Planes</button>
+        <button type="button" data-scroll="#testimonials">Testimonios</button>
+        <span id="nav-auth-slot"></span>
+        <button type="button" class="btn btn--sm btn--primary gradient-primary btn--round" data-scroll="#cta">Empezar ahora</button>
+      </div>
+      <button type="button" class="nav__toggle" id="nav-toggle" aria-expanded="false" aria-label="Abrir menú">
+        <svg id="icon-menu" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+        <svg id="icon-close" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" style="display:none"><path d="M18 6L6 18M6 6l12 12"/></svg>
+      </button>
+    </div>
+    <div class="nav__drawer glass-strong" id="nav-drawer">
+      <button type="button" data-scroll="#hero">Inicio</button>
+      <button type="button" data-scroll="#trainers">Entrenadores</button>
+      <button type="button" data-scroll="#locations">Sedes</button>
+      <button type="button" data-scroll="#plans">Planes</button>
+      <button type="button" data-scroll="#testimonials">Testimonios</button>
+      <div id="nav-auth-slot-mobile"></div>
+      <button type="button" class="btn btn--sm btn--primary gradient-primary btn--round btn--full" data-scroll="#cta">Empezar ahora</button>
+    </div>
+  </nav>
+
+  <section id="hero" class="hero">
+    <div class="hero__bg" style="background-image:url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=1920&q=80')"></div>
+    <div class="hero__overlay"></div>
+    <div class="hero__content container">
+      <h1 class="hero__title reveal" id="hero-title"></h1>
+      <p class="hero__subtitle reveal" id="hero-subtitle"></p>
+      <div class="reveal">
+        <button type="button" class="btn btn--lg gradient-primary btn--round">Agendá tu clase gratis</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="metrics glass">
+    <div class="container">
+      <div class="metrics__grid" id="metrics-grid"></div>
+    </div>
+  </section>
+
+  <section id="trainers" class="section-pad">
+    <div class="container">
+      <div class="section-title reveal">
+        <h2>Nuestros <span class="text-gradient">Entrenadores</span></h2>
+        <p>Profesionales certificados con años de experiencia para guiarte en cada paso.</p>
+      </div>
+      <div class="trainers__grid" id="trainers-grid"></div>
+    </div>
+  </section>
+
+  <section id="locations" class="section-pad">
+    <div class="container">
+      <div class="section-title reveal">
+        <h2>Nuestras <span class="text-gradient">Sedes</span></h2>
+        <p>Encontrá la sede más cercana y empezá a entrenar hoy.</p>
+      </div>
+      <div class="loc-tabs" id="loc-tabs" role="tablist"></div>
+      <div class="loc-content reveal" id="loc-content"></div>
+    </div>
+  </section>
+
+  <section id="plans" class="section-pad">
+    <div class="container">
+      <div class="section-title reveal">
+        <h2>Elegí tu <span class="text-gradient">Plan</span></h2>
+        <p>Planes flexibles para cada objetivo. Sin permanencia mínima.</p>
+      </div>
+      <div class="plans__grid" id="plans-grid"></div>
+    </div>
+  </section>
+
+  <section id="testimonials" class="section-pad">
+    <div class="container">
+      <div class="section-title reveal">
+        <h2>Lo que dicen <span class="text-gradient">nuestros socios</span></h2>
+      </div>
+      <div class="testimonials__grid" id="testimonials-grid"></div>
+    </div>
+  </section>
+
+  <section id="cta" class="cta">
+    <div class="container cta__inner">
+      <div class="reveal">
+        <h2>Tu mejor versión empieza <span class="text-gradient">hoy</span></h2>
+        <p>Agendá una entrevista gratuita con uno de nuestros coaches y conocé el plan ideal para vos.</p>
+        <button type="button" class="btn btn--lg gradient-primary btn--round">Agendá tu entrevista gratis</button>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <h3 class="text-gradient" id="footer-brand">Iron Force Gym</h3>
+          <p class="text-muted" style="color:var(--muted-foreground);font-size:0.875rem;margin:0" id="footer-slogan"></p>
+        </div>
+        <div>
+          <h4>Navegación</h4>
+          <ul>
+            <li><button type="button" data-scroll="#hero">Inicio</button></li>
+            <li><button type="button" data-scroll="#trainers">Entrenadores</button></li>
+            <li><button type="button" data-scroll="#locations">Sedes</button></li>
+            <li><button type="button" data-scroll="#plans">Planes</button></li>
+            <li><button type="button" data-scroll="#testimonials">Testimonios</button></li>
+            <li><a href="socio.html" style="font-size:0.875rem;color:var(--muted-foreground);text-decoration:none">Portal del socio</a></li>
+            <li><a href="auth.html" style="font-size:0.875rem;color:var(--muted-foreground);text-decoration:none">Acceso personal (DNI)</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contacto</h4>
+          <ul id="footer-contact"></ul>
+        </div>
+      </div>
+      <div class="footer__copy" id="footer-copy"></div>
+    </div>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/session.js"></script>
+  <script src="js/index.js"></script>
+</body>
+</html>
